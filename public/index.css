@@ -1,0 +1,74 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 1em;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+}
+.container {
+  min-height: 500px;
+  /* border: 1px solid grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  /* border: 1px solid pink; */
+  padding: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  width: 50%;
+  min-width: 200px;
+  align-items: center;
+  background-color: #005226;
+  border-radius: 15px;
+}
+.myH1{
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+.myForm{
+    display: grid;
+    width: 100%;
+    min-width: 10%;
+    grid-gap: 1em;
+    background-color: #005226;
+    border-radius: 20px;
+    padding: 1em    ;
+}
+
+input{
+    /* border: 1px solid pink; */
+    border-radius: 25px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button{
+width: 40%;
+font-size: 0.6em;
+border-radius: 25px;
+border: none;
+padding: 0.8em;
+
+}
+
+button:hover{
+    background-color: purple;
+    color: white;
+}
+
+

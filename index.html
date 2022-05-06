@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="block">
+    <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <h1>Login Page</h1>
+        </div>
+    </nav>
+</div>
+<div class="block"></div>
+    <div class="block">
+        <div class="columns  is-justify-content-center ">
+            <form class="box myForm">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input email" name ="email" type="email" placeholder="e.g. alex@example.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input myName" type="text" id="myName" name="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input password" type="password" name="password" placeholder="********">
+                    </div>
+                </div>
+                <button type="submit" class= "button myButton is-warning" onclick="signUp(event)">Sign in</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+const form = document.querySelector('.myForm');
+const email = document.querySelector('.email');
+const password = document.querySelector('.password');
+const myName = document.querySelector('#myName');
+const submit = document.querySelector('.myButton');
+console.log(email.value)
+const signUp = (e) => {
+    e.preventDefault();
+    console.log(email.value,myName.value,password.value)
+    // console.log('hello',email + "helloagian",password,myName)
+    const data = {
+        "email": email.value,
+        "name": myName.value,
+        "password": password.value,
+            }
+    axios.post("http://localhost:3000/user", data)
+    console.log('it worked')
+}
+</script>
+</body>
+
+</html>
